@@ -1,13 +1,10 @@
 package net.codejava;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
+import java.sql.*;
 public class UsersManager {
 	
 	public static void main(String[] args) {
-		String dbURL = "jdbc:mysql://localhost:3306/s";
+		String dbURL = "jdbc:mysql://localhost:3306/sriindu";
 		String username = "root";
 		String password = "root";
 		 

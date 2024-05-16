@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public class DeleteData {
 	public static void main(String[] args) {
-		String dbURL = "jdbc:mysql://localhost:3306/sampledb";
+		String dbURL = "jdbc:mysql://localhost:3306/sriindu";
 		String username = "root";
 		String password = "root";
 		 
@@ -22,6 +22,10 @@ public class DeleteData {
 		    int rowsDeleted = statement.executeUpdate();
 		    if (rowsDeleted > 0) {
 		        System.out.println("A user was deleted successfully!");
+		    }
+		    else 
+		    {
+		    	System.out.println("no records found!");
 		    }
 		} catch (SQLException ex) {
 		    ex.printStackTrace();

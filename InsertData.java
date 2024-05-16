@@ -7,23 +7,28 @@ import java.sql.SQLException;
 
 public class InsertData {
 	public static void main(String[] args) {
-		String dbURL = "jdbc:mysql://localhost:3306/sampledb";
+		String dbURL = "jdbc:mysql://localhost:3306/sriindu";
 		String username = "root";
 		String password = "root";
 		 
 		try {
 		 
 		    Connection conn = DriverManager.getConnection(dbURL, username, password);
-		    String sql = "INSERT INTO Users (username, password, fullname, email) VALUES (?, ?, ?, ?)";
+		    String sql = "INSERT INTO employee (empname, empuid, empfullname, empemail) VALUES (?, ?, ?, ?)";
 		    
 		    PreparedStatement statement = conn.prepareStatement(sql);
 		    statement.setString(1, "suresh");
 		    statement.setString(2, "suresh123");
 		    statement.setString(3, "suresh kumar");
 		    statement.setString(4, "suresh@microsoft.com");
-		     
+		    
 		    int rowsInserted = statement.executeUpdate();
-		    if (rowsInserted > 0) {
+		    statement.setString(1, "raju");
+		    statement.setString(2, "raju123");
+		    statement.setString(3, "raju kumar");
+		    statement.setString(4, "raju@microsoft.com");
+		    int rowsInserted1 = statement.executeUpdate();
+		    if (rowsInserted > 0 && rowsInserted1 >0) {
 		        System.out.println("A new user was inserted successfully!");
 		    }
 		} catch (SQLException ex) {

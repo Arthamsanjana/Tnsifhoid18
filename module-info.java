@@ -2,8 +2,8 @@
  * 
  */
 /**
- * @author TNS INDIA
- *
+ * 
  */
-module SriinduDay1 {
+module employee {
+	requires java.sql;
 }

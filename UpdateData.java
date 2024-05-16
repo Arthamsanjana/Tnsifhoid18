@@ -7,20 +7,20 @@ import java.sql.SQLException;
 
 public class UpdateData {
 	public static void main(String[] args) {
-		String dbURL = "jdbc:mysql://localhost:3306/sampledb";
+		String dbURL = "jdbc:mysql://localhost:3306/sriindu";
 		String username = "root";
 		String password = "root";
 		 
 		try {
 		 
 		    Connection conn = DriverManager.getConnection(dbURL, username, password);
-		    String sql = "UPDATE Users SET password=?, fullname=?, email=? WHERE username=?";
+		    String sql = "UPDATE employee SET empuid=?, empfullname=?, empemail=? WHERE empname=?";
 		    
 		    PreparedStatement statement = conn.prepareStatement(sql);
 		    statement.setString(1, "123");
 		    statement.setString(2, "William Henry Bill Gates");
 		    statement.setString(3, "bill.gates@microsoft.com");
-		    statement.setString(4, "bill");
+		    statement.setString(4, "suresh");
 		     
 		    int rowsUpdated = statement.executeUpdate();
 		    if (rowsUpdated > 0) {
