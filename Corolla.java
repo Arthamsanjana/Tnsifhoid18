@@ -1,11 +1,9 @@
-package org.studyeasy.cars;
+package org.studyeasy;
 
-import org.springframework.stereotype.Component;
 import org.studyeasy.interfaces.Car;
 
-@Component("corolla")
-public class Corolla implements Car {
-
+public class Corolla implements Car{
+	
 	public String specs() {
 		return "Sedan from Toyota";
 	}
